@@ -20,14 +20,14 @@ void Display :: begin()
   lcd.print("  Md. Masrur Saqib  ");
   lcd.setCursor(0,3);
   lcd.print("       Gizan        ");
-  delay(5000);
+  delay(1500);
   lcd.setCursor(0,1);
   lcd.print("     guided by      ");
   lcd.setCursor(0,2);
   lcd.print(" Prof. Dr. Mir Md.  ");
   lcd.setCursor(0,3);
-  lcd.print(" Jahangir Kabir Sir ");
-  delay(5000);
+  lcd.print("  Jahangir Kabr Sir ");
+  delay(1500);
 }
 
 void Display :: show(int x, int y, String text)
@@ -38,10 +38,10 @@ void Display :: show(int x, int y, String text)
 
 void Display :: show(int x, int y, float num)
 {
+  lcd.setCursor(x,y);
   num *= 100;
   int ver = num;
   num = ver / 100.0;
-  lcd.setCursor(x,y);
   lcd.print(num);
 }
 
@@ -70,29 +70,5 @@ void Display :: legend()
   lcd.print("Temperature     C   ");
   lcd.setCursor(0,3);
   lcd.print("AirQuality          ");
-  delay(500);
-}
-
-void Display :: legendVal(float dust, float hum, float temp, String quality)
-{
-  lcd.setCursor(0,0);
-  lcd.print("DustLvL ");
-  lcd.print(dust);
-  lcd.print(" ug/L  ");
-  delay(500);
-  lcd.setCursor(0,1);
-  lcd.print("Humidity ");
-  lcd.print(hum);
-  lcd.print(" %   ");
-  delay(500);
-  lcd.setCursor(0,2);
-  lcd.print("Temperature ");
-  lcd.print(temp);
-  lcd.print(" C   ");
-  delay(500);
-  lcd.setCursor(0,3);
-  lcd.print("AirQuality ");
-  lcd.print(quality);
-  lcd.print("  ");
   delay(500);
 }

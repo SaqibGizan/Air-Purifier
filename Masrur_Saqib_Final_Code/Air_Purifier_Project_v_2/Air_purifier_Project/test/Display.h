@@ -12,7 +12,6 @@ class Display {
     void show(int x, int y, double num);
     void show(int x, int y, float num);
     void show(int x, int y, String text);
-    void legendVal(float dust, float hum, float temp, String quality);
 
 
 };

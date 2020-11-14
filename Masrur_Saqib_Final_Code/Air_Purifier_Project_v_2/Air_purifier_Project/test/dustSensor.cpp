@@ -48,7 +48,6 @@ float dustSensor :: avgDensity()
 {
   avgDensityTotal += dustLvl();
   averageDensity = avgDensityTotal / 2.0;
-  avgDensityTotal = averageDensity;
   return averageDensity;
 }
 
@@ -56,19 +55,19 @@ String dustSensor :: airHealth()
 {
   String health;
   if (averageDensity < 10) {
-    health = "Healthy";
+    health = " Healthy";
   }
   else if (averageDensity < 30) {
-    health = "Modarate";
+    health = " Modarate";
   }
   else if (averageDensity < 50) {
-    health = "Sensitive";
+    health = " Sensitive";
   }
   else if (averageDensity < 145) {
-    health = "Unhealthy";
+    health = " Unhealthy";
   }
   else {
-    health = "Hazardous";
+    health = " Hazardous";
   }
   return health;
 }

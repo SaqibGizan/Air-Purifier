@@ -10,7 +10,6 @@ class dustSensor {
     const float K = 0.5;
     int sampleRate = 100;
     float dustDensity = 0;
-    
 
   public:
     float averageDensity = 0;
